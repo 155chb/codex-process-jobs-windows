@@ -1,0 +1,29 @@
+Codex Process Jobs Windows
+Copyright 2026 155chb contributors
+
+This independently developed Windows implementation includes material from:
+Codex Process Jobs, by Joel Farthing
+https://github.com/joelfarthing/codex-process-jobs
+Source revision: d3ae221af864097208fd977f3cda492be37e00b1
+License: Apache License, Version 2.0 (included in LICENSE)
+
+scripts/codex-queue.mjs is derived from upstream scripts/codex-queue.mjs.
+Modifications add windowsHide and an injectable spawn function for tests.
+The owning-rollout discovery in scripts/state.mjs follows the approach in
+upstream scripts/session.mjs and has been rewritten for this runtime.
+The detached execution / idle-boundary / queue / durable-result design is
+inspired by the upstream project. Other files are newly written.
+
+This is not an official Windows release of Joel Farthing's project, and is
+not endorsed by Joel Farthing or OpenAI. Author names identify provenance,
+not endorsement. No original icons, branding assets or user data are included.
+
+The isolated scripts/ipc-native-process-run.mjs probe adapts protocol handling
+from leeguooooo/open-cross-session, src/codex-ipc.ts (MIT, copyright 2026
+leeguooooo). License included in licenses/open-cross-session-MIT.txt.
+Changes: Windows pipe endpoint; current-thread-only inspect/wake modes; bounded
+frames and deadlines; custom toolOutput without official namespace impersonation;
+no persistent state, stream following, patches, delegation or automatic retries.
+Version 0.4.0 adapts this protocol into scripts/desktop-ipc.mjs for opt-in
+implicit completion notifications. Added shared in-memory completion batching,
+rollout idle checks and no-retry-on-uncertain-acceptance protection.

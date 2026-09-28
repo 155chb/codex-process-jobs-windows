@@ -1,0 +1,20 @@
+{
+  "name": "codex-process-jobs-windows",
+  "version": "0.5.1",
+  "description": "Windows native command output with guarded implicit IPC completion wakeups.",
+  "license": "Apache-2.0",
+  "author": {
+    "name": "155chb"
+  },
+  "interface": {
+    "displayName": "Codex Process Jobs Windows",
+    "shortDescription": "Background Windows jobs; continue on completion",
+    "longDescription": "Experimental Windows PowerShell hooks: original native output, 30-second completion threshold, in-memory batching and guarded Desktop IPC wakeups. Known final-instant race with user submissions; no automatic retry after uncertain acceptance.",
+    "developerName": "155chb",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Write"
+    ],
+    "defaultPrompt": "检查任务执行结果。"
+  }
+}

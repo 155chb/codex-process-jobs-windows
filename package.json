@@ -1,0 +1,15 @@
+{
+  "name": "codex-process-jobs-windows",
+  "version": "0.5.1",
+  "private": true,
+  "type": "module",
+  "license": "Apache-2.0",
+  "author": "155chb",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "check": "node --check scripts/native-hook.mjs && node --check scripts/completion-broker.mjs && node --check scripts/desktop-ipc.mjs"
+  }
+}

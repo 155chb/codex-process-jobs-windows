@@ -1,0 +1,12 @@
+node_modules/
+.test-state/
+test-results/
+*.zip
+*.log
+__pycache__/
+.env
+.env.*
+*.jsonl
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
